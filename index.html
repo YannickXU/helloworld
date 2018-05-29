@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>搞点事件</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="page">
+        <!--周边闪烁的灯-->
+        <div class="lamp"></div>
+
+        <!--下边闪烁的星星-->
+        <div class="star"></div>
+        <!--搞点事情-->
+        <div class="header">
+            <img src="./img/header.png">
+        </div>
+        <!--老虎机-->
+        <div class="main">
+            <div class="show">
+                <!--左边的框-->
+                <div class="gameImg">
+                    <div class="lonelyImg" id="lonely1">
+                        <img src="img/who/w1.png">
+                        <img src="img/who/w2.png">
+                        <img src="img/who/w3.png">
+                        <img src="img/who/w4.png">
+                        <img src="img/who/w5.png">
+                        <img src="img/who/w6.png">
+                        <img src="img/who/w1.png">
+                    </div>
+                </div>
+                <!--中间的框-->
+                <div class="gameImg">
+                    <div class="lonelyImg" id="lonely2">
+                        <img src="img/where/g1.png">
+                        <img src="img/where/g2.png">
+                        <img src="img/where/g3.png">
+                        <img src="img/where/g4.png">
+                        <img src="img/where/g5.png">
+                        <img src="img/where/g6.png">
+                        <img src="img/where/g1.png">
+                    </div>
+                </div>
+                <!--右边的框-->
+                <div class="gameImg">
+                    <div class="lonelyImg" id="lonely3">
+                        <img src="img/how/h1.png">
+                        <img src="img/how/h2.png">
+                        <img src="img/how/h3.png">
+                        <img src="img/how/h4.png">
+                        <img src="img/how/h5.png">
+                        <img src="img/how/h6.png">
+                        <img src="img/how/h1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--一键生成-->
+        <span id="produce"></span>
+        <div class="footer">
+            <!--左右两个发光的小球-->
+            <span class="light1"></span>
+            <span class="light2"></span>
+            <!--文本框-->
+            <div class="todo" id="todo">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="./JS/game.js"></script>
+
+</body>
+</html>

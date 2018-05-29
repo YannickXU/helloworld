@@ -1,0 +1,334 @@
+/*全局样式*/
+@font-face {
+    font-family: MyFont;
+    src: url("../Font/迷你简少儿.woff");
+}
+*{
+    margin: 0;padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*全局样式*/
+.page {
+    height: 100%;
+    
+    background: url(../img/bg.png) no-repeat;
+    background-size: 100% 100%;
+    animation: page1 1s ease;
+}
+
+/*背景动画*/
+@keyframes page1 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*title*/
+.header {
+    width: 86%;
+    height: 24%;
+    margin: 3% auto 0;
+    opacity: 0;
+    animation: header 1s ease, header1 1s ease;
+    animation-delay: 1s, 4s;
+    animation-fill-mode: forwards, forwards;
+}
+
+/*头部动画1*/
+@keyframes header {
+    0% {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-0deg);
+    }
+}
+
+/*头部动画2*/
+@keyframes header1 {
+    20%, 40%, 60%, 80%, 100% {
+        transform-origin: top center
+    }
+    20% {
+        transform: rotate(15deg)
+    }
+    40% {
+        transform: rotate(-10deg)
+    }
+    60% {
+        transform: rotate(5deg)
+    }
+    80% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+/*中间区域*/
+.main {
+    width: 100%;
+    height: 22%;
+    background: url("../img/choose.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 13% 0 13%;
+    position: relative;
+    opacity: 0;
+    animation: main 2s ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes main {
+    0% {
+        opacity: 0;
+        transform: translateY(50rem);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(-10rem);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10rem);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(8rem);
+    }
+    80%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+/*给span区域一个大一点得zIndex值，让他处于最上面，盖过闪烁灯层，不然span区域被遮盖按钮无法点击*/
+
+
+.show {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+/*中间包裹图片的框*/
+.gameImg {
+    width: 28%;
+    height: 100%;
+    float: left;
+    margin-right: 8%;
+    position: relative;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.gameImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.gameImg:last-child {
+    margin-right: 0;
+}
+
+/*向上滚动的框*/
+.lonelyImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    font-size: 0;
+}
+
+#produce {
+    width: 36%;
+    height: 6%;
+    position: absolute;
+    top: 58%;
+    background: url("../img/produce.png") no-repeat;
+    background-size: cover;
+    left: 50%;
+    margin-left: -18%;
+    z-index: 5;
+    opacity: 0;
+    animation: produce 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes produce {
+    100% {
+        opacity: 1;
+    }
+}
+
+/*底部区域*/
+.footer {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    background: url("../img/todo.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    animation: footer 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+/*底部区域最上方左右闪烁的小灯*/
+.footer span {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    opacity: 0;
+    animation: footerSpan .4s linear infinite alternate;
+}
+
+@keyframes footerSpan {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.footer .light1 {
+    float: left;
+    margin-left: 2%;
+    background: url("../img/leftLine.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.footer .light2 {
+    float: right;
+    margin-right: 2%;
+    background: url("../img/RightLine.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+@keyframes footer {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg)
+    }
+}
+
+/*底部区域文本框*/
+.footer .todo {
+    width: 76%;
+    height: 16%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -38%;
+    background: #fff;
+    border: 0.2rem solid #5b3206;
+    border-radius: 0.4rem;
+    text-align: center;
+    line-height: 2.8;
+    font-family: MyFont;
+    z-index: 4;
+}
+
+/*四周的灯*/
+.lamp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/lamp1.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    animation: lamp .3s linear infinite;
+}
+
+/*四周的灯动画*/
+@keyframes lamp {
+    0% {
+        background: url("../img/lamp1.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("../img/lamp2.png") no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+/*最下方的星星*/
+.star {
+    width: 80%;
+    height: 4rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    bottom: 0;
+    background: url("../img/star.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 3;
+    animation: star 1s linear infinite alternate;
+}
+
+/*最下方的动画*/
+@keyframes star {
+    0% {
+        background: url("../img/star.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("../img/starLight.png") no-repeat;
+        background-size: 100% 100%;
+    }
+}
